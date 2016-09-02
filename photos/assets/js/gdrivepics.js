@@ -36,10 +36,12 @@ $(document).ready(function(){
     }
 
   var url = "https://www.googleapis.com/drive/v3/files?q='" + folderId + "'+in+parents&key=" + api_key;
+  console.log(url);
   var promise = $.getJSON( url, function( data, status ){
 
       data.files.forEach(function(e, i, a){
         var link = 'http://googledrive.com/host/' + folderId + '/' + e.name;
+        console.log(link);
         $('#reel').append('<article class="item thumb" data-width="282"><h2>' + e.name + '</h2><a href="' + link + ' class="image"><img src="' + link + '" alt="' + e.name + '"></a></article>');
         });
     

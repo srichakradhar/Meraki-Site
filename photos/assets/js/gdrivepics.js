@@ -1,4 +1,4 @@
-$(document).ready(function(){
+function getpics(){
   var api_key = 'AIzaSyDa5wotmqf0VJ78k-JRdAyOe60aro27Lcs';
   // var api_key = 'AIzaSyBK2p7xo5IXzmaOKnh0XjQGFcQ2iFmlvO4';
   var folderId = '0B53m5QwmR1KbY1ZtTGZ5eGZJdlk';
@@ -36,7 +36,6 @@ $(document).ready(function(){
     }
 
   var url = "https://www.googleapis.com/drive/v3/files?q='" + folderId + "'+in+parents&key=" + api_key;
-  console.log(url);
   var promise = $.getJSON( url, function( data, status ){
 
       data.files.forEach(function(e, i, a){
@@ -51,4 +50,4 @@ $(document).ready(function(){
   }).fail(function(){
     
   });
-});
+};

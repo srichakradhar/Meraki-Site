@@ -40,9 +40,9 @@ $(document).ready(function(){
   var promise = $.getJSON( url, function( data, status ){
 
       data.files.forEach(function(e, i, a){
-        var link = 'http://googledrive.com/host/' + folderId + '/' + e.name;
+        var link = 'https://googledrive.com/host/' + folderId + '/' + e.name;
         console.log(link);
-        $('#reel').append('<article class="item thumb" data-width="282"><h2>' + e.name + '</h2><a href="' + link + ' class="image"><img src="' + link + '" alt="' + e.name + '"></a></article>');
+        $('#main').append('<article class="item thumb" data-width="282"><h2>' + e.name + '</h2><a href="' + link + ' class="image"><img src="' + link + '" alt="' + e.name + '"></a></article>');
         });
     
   });

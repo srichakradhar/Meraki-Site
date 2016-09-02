@@ -41,13 +41,13 @@ $(document).ready(function(){
 
       data.files.forEach(function(e, i, a){
         var link = 'https://googledrive.com/host/' + folderId + '/' + e.name;
-        console.log(link);
         $('#main').append('<article class="item thumb" data-width="282"><h2>' + e.name + '</h2><a href="' + link + ' class="image"><img src="' + link + '" alt="' + e.name + '"></a></article>');
         });
     
   });
   promise.done(function( data ){
-      
+      func(jQuery);
+      console.log('success!');
   }).fail(function(){
     
   });

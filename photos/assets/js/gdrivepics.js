@@ -41,7 +41,7 @@ $(document).ready(function(){
 
       data.files.forEach(function(e, i, a){
         var link = 'https://googledrive.com/host/' + folderId + '/' + e.name;
-        $('#main').append('<article class="item thumb" data-width="282"><h2>' + e.name + '</h2><a href="' + link + ' class="image"><img src="' + link + '" alt="' + e.name + '"></a></article>');
+        $('#reel').append('<article class="item thumb" data-width="282"><h2>' + e.name + '</h2><a href="' + link + ' class="image"><img src="' + link + '" alt="' + e.name + '"></a></article>');
         });
     
   });
